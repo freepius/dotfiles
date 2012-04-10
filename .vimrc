@@ -1,7 +1,6 @@
 
 " Load plugins
-runtime! ~/.vim/plugin/Project.vim
-runtime! ~/.vim/plugin/local_vimrc.vim
+call pathogen#infect()
 
 " No compatible with vi
 set nocompatible
@@ -62,15 +61,7 @@ autocmd BufWinEnter * let w:m2=matchadd('The81Char', '\%81v', -1)
 
 "---- CONFIG FOR PHP ----------------------------------------------------------"
 
-" PHP parser check (CTRL-L)
-autocmd FileType php noremap <C-L> :!/usr/bin/php5 -l %<CR>
-
 " Syntaxic coloration for SQL and HTML inside PHP code
 let php_sql_query=1
 let php_htmlInStrings=1
-
-
-"---- CONFIG FOR PROJECT PLUGIN -----------------------------------------------"
-
-:let g:proj_flags='g s S T'
 

@@ -1,0 +1,18 @@
+[submodule ".vim/bundle/vim-less"]
+	path = .vim/bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git
+[submodule ".vim/bundle/jslint"]
+	path = .vim/bundle/jslint
+	url = https://github.com/hallettj/jslint.vim.git
+[submodule ".vim/bundle/Align"]
+	path = .vim/bundle/Align
+	url = https://github.com/vim-scripts/Align.git
+[submodule ".vim/bundle/comments"]
+	path = .vim/bundle/comments
+	url = https://github.com/vim-scripts/comments.vim
+[submodule ".vim/bundle/local_vimrc"]
+	path = .vim/bundle/local_vimrc
+	url = https://github.com/vim-scripts/local_vimrc.vim.git
+[submodule ".vim/bundle/L9"]
+	path = .vim/bundle/L9
+	url = https://github.com/vim-scripts/L9.git
