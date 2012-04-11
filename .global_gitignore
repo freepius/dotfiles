@@ -1,0 +1,8 @@
+# Local vimrc
+_vimrc_local.vim
+
+# Backups
+*~
+
+# Temporary files
+*.swp
