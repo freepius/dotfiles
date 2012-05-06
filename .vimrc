@@ -37,6 +37,7 @@ set showmatch       " Show matching brackets.
 set nowrap          " Do not cut lines when too long
 set showcmd         " Show (partial) command in status line.
 set hidden          " Hide buffers when they are abandoned
+set scrolloff=1000  " Centering the screen on current line
 
 " Searching
 set ignorecase      " Do case insensitive matching
