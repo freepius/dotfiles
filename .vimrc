@@ -37,7 +37,6 @@ set showmatch       " Show matching brackets.
 set nowrap          " Do not cut lines when too long
 set showcmd         " Show (partial) command in status line.
 set hidden          " Hide buffers when they are abandoned
-set scrolloff=1000  " Centering the screen on current line
 
 " Searching
 set ignorecase      " Do case insensitive matching
@@ -66,3 +65,9 @@ autocmd BufWinEnter * let w:m2=matchadd('The81Char', '\%81v', -1)
 let php_sql_query=1
 let php_htmlInStrings=1
 
+
+"---- CONFIG FOR JSLint plugin-------------------------------------------------"
+
+" TODO: check if JSLint plugin is loaded to map
+let g:JSLintHighlightErrorLine = 0
+map <c-j> :let g:JSLintHighlightErrorLine = g:JSLintHighlightErrorLine ? 0 : 1<CR> :JSLintUpdate<CR>
