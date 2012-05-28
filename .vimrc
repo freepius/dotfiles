@@ -58,6 +58,11 @@ autocmd BufWinEnter * let w:m2=matchadd('NoSpacesEOL', ' \+$', -1)
 highlight The81Char ctermbg=red ctermfg=white guibg=#592929
 autocmd BufWinEnter * let w:m2=matchadd('The81Char', '\%81v', -1)
 
+" GUI options
+if has('gui_running')
+	set guifont=Monospace\ 10
+endif
+
 
 "---- CONFIG FOR PHP ----------------------------------------------------------"
 
