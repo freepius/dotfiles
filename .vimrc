@@ -63,6 +63,10 @@ if has('gui_running')
 	set guifont=Monospace\ 10
 endif
 
+" Removes whitespace at the end of every line
+" TODO: Improve this map, or find a plugin !
+map ,tb :%s/\s\+$//<CR>
+
 
 "---- CONFIG FOR PHP ----------------------------------------------------------"
 
@@ -73,6 +77,6 @@ let php_htmlInStrings=1
 
 "---- CONFIG FOR JSLint plugin-------------------------------------------------"
 
-" TODO: check if JSLint plugin is loaded to map
+" TODO: check if JSLint plugin is loaded before map
 let g:JSLintHighlightErrorLine = 0
 map <c-j> :let g:JSLintHighlightErrorLine = g:JSLintHighlightErrorLine ? 0 : 1<CR> :JSLintUpdate<CR>
