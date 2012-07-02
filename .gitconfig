@@ -1,6 +1,6 @@
 [user]
-	name = freepius44
-	email = freepius44@gmail.com
+    name = freepius44
+    email = freepius44@gmail.com
 
 [color]
     diff = auto
@@ -21,3 +21,5 @@
     addremove = !git add . && git ls-files --deleted | xargs --no-run-if-empty git rm
     fshow = ! sh -c 'git show --pretty="format:" --name-only $1 | grep -v "^$" | uniq | sed -e "s#^#`git rev-parse --show-toplevel`/#"' -
     vim = ! sh -c 'vim `git fshow $1`' -
+[push]
+    default = tracking
