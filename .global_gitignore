@@ -1,5 +1,5 @@
-# Local vimrc
-_vimrc_local.vim
+# Vim files
+*.vim
 
 # Backups
 *~
