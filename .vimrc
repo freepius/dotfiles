@@ -13,7 +13,7 @@ set fileformat=unix
 set encoding=utf-8
 
 " Tabulation
-set noexpandtab
+set expandtab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
