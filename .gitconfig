@@ -23,5 +23,3 @@
     vim = ! sh -c 'vim `git fshow $1`' -
 [push]
     default = tracking
-[http]
-	sslVerify = false
