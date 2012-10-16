@@ -52,9 +52,13 @@ set autowrite       " Automatically save before commands like :next and :make
 set backspace=indent,eol,start
 set ruler
 
-" Mark in red 'EOL spaces' and 81th character
+" Mark in red 'EOL spaces', 'unbreakable spaces' and 81th character
 highlight NoSpacesEOL ctermbg=red ctermfg=white guibg=#592929
 autocmd BufWinEnter * let w:m2=matchadd('NoSpacesEOL', ' \+$', -1)
+
+highlight NoSpacesUnbreakable ctermbg=red ctermfg=white guibg=#592929
+autocmd BufWinEnter * let w:m2=matchadd('NoSpacesEOL', ' ', -1)
+
 highlight The81Char ctermbg=red ctermfg=white guibg=#592929
 autocmd BufWinEnter * let w:m2=matchadd('The81Char', '\%81v', -1)
 
