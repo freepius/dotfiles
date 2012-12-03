@@ -28,3 +28,6 @@
 [submodule ".vim/bundle/vim-fontzoom"]
 	path = .vim/bundle/vim-fontzoom
 	url = https://github.com/thinca/vim-fontzoom.git
+[submodule ".vim/bundle/textile"]
+	path = .vim/bundle/textile
+	url = https://github.com/timcharper/textile.vim.git

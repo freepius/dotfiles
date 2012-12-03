@@ -1,4 +1,3 @@
-
 " Load plugins
 call pathogen#infect()
 
@@ -84,3 +83,9 @@ let php_htmlInStrings=1
 " TODO: check if JSLint plugin is loaded before map
 let g:JSLintHighlightErrorLine = 0
 map <c-j> :let g:JSLintHighlightErrorLine = g:JSLintHighlightErrorLine ? 0 : 1<CR> :JSLintUpdate<CR>
+
+
+"---- CONFIG FOR Textile plugin-------------------------------------------------"
+
+let g:TextileOS="Linux"
+let g:TextileBrowser="/opt/firefox/firefox"
