@@ -43,6 +43,9 @@ set smartcase       " Do smart case matching
 set incsearch       " Incremental search
 set hlsearch        " Highlight matched patterns
 
+" Default language for spell
+setlocal spelllang=fr
+
 " Stop the highlighting for the 'hlsearch' option.
 map <leader><space> :nohlsearch<cr>
 
