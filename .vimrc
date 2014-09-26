@@ -26,7 +26,7 @@ set list listchars=tab:>-,trail:.,precedes:<,extends:>
 
 " Appearance
 syntax on
-colorscheme darkblue
+colorscheme solarized
 set background=dark    " Adapt colors to dark background
 
 " Some graphic options
