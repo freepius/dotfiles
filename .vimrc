@@ -59,7 +59,7 @@ highlight NoSpacesEOL ctermbg=red ctermfg=white guibg=#592929
 autocmd BufWinEnter * let w:m2=matchadd('NoSpacesEOL', ' \+$', -1)
 
 highlight NoSpacesUnbreakable ctermbg=red ctermfg=white guibg=#592929
-autocmd BufWinEnter * let w:m2=matchadd('NoSpacesEOL', ' ', -1)
+autocmd BufWinEnter * let w:m2=matchadd('NoSpacesUnbreakable', ' ', -1)
 
 highlight The81Char ctermbg=red ctermfg=white guibg=#592929
 autocmd BufWinEnter * let w:m2=matchadd('The81Char', '\%81v', -1)
@@ -70,8 +70,10 @@ if has('gui_running')
 endif
 
 " Removes whitespace at the end of every line
-" TODO: Improve this map, or find a plugin !
 map ,tb :%s/\s\+$//<CR>
+
+" map CTRL+k S N (non-breaking space) to CTRL+space
+imap <C-space> <C-k><space><space>
 
 
 "---- CONFIG FOR PHP ----------------------------------------------------------"
