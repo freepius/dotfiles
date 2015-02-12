@@ -8,7 +8,7 @@
     branch = auto
 
 [core]
-    excludesfile = ~/.global_gitignore
+    excludesfile = ~/dotfiles/.global_gitignore
 
 [alias]
     st = status
