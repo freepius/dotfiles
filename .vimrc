@@ -73,7 +73,10 @@ endif
 map ,tb :%s/\s\+$//<CR>
 
 " map CTRL+k S N (non-breaking space) to CTRL+space
-imap <C-space> <C-k><space><space>
+imap <C-space> <C-k>SN
+
+" map CTRL+k ' 9 (curly apostrophe) to CTRL+a
+imap <C-a> <C-k>'9
 
 
 "---- CONFIG FOR PHP ----------------------------------------------------------"
