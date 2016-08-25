@@ -21,7 +21,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'lumiliet/vim-twig'
 
 call vundle#end()            " required
-filetype plugin indent on    " required
 
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
@@ -55,14 +54,13 @@ set list listchars=tab:>-,trail:.,precedes:<,extends:>
 syntax on
 colorscheme solarized
 set background=dark    " Adapt colors to dark background
-
-" Some graphic options
-set mouse=a         " Enable mouse usage (all modes)
-set number          " Show line numbers
-set showmatch       " Show matching brackets.
-set nowrap          " Do not cut lines when too long
-set showcmd         " Show (partial) command in status line.
-set hidden          " Hide buffers when they are abandoned
+set laststatus=2       " Enable the full status line (useful for the lightline package)
+set mouse=a            " Enable mouse usage (all modes)
+set number             " Show line numbers
+set showmatch          " Show matching brackets.
+set nowrap             " Do not cut lines when too long
+set showcmd            " Show (partial) command in status line.
+set hidden             " Hide buffers when they are abandoned
 
 " Searching
 set ignorecase      " Do case insensitive matching
@@ -104,23 +102,3 @@ imap <C-space> <C-k>SN
 
 " map CTRL+k ' 9 (curly apostrophe) to CTRL+a
 imap <C-a> <C-k>'9
-
-
-"---- CONFIG FOR PHP ----------------------------------------------------------"
-
-" Syntaxic coloration for SQL and HTML inside PHP code
-let php_sql_query=1
-let php_htmlInStrings=1
-
-
-"---- CONFIG FOR JSLint plugin-------------------------------------------------"
-
-" TODO: check if JSLint plugin is loaded before map
-let g:JSLintHighlightErrorLine = 0
-map <c-j> :let g:JSLintHighlightErrorLine = g:JSLintHighlightErrorLine ? 0 : 1<CR> :JSLintUpdate<CR>
-
-
-"---- CONFIG FOR Textile plugin-------------------------------------------------"
-
-let g:TextileOS="Linux"
-let g:TextileBrowser="/opt/firefox/firefox"
