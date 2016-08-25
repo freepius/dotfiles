@@ -1,5 +1,35 @@
-" No compatible with vi
-set nocompatible
+"---- CONFIG VUNDLE PACKAGE MANAGER -------------------------------------------"
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'L9'
+Plugin 'AutoComplPop'
+Plugin 'comments.vim'
+Plugin 'itchyny/lightline.vim'
+Plugin 'Townk/vim-autoclose'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'thinca/vim-fontzoom'
+Plugin 'groenewege/vim-less'
+Plugin 'tpope/vim-surround'
+Plugin 'lumiliet/vim-twig'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+
+
+"---- MAIN CONFIG  ------------------------------------------------------------"
 
 " Leader
 let mapleader = ","

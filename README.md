@@ -17,3 +17,9 @@ Don't forget to:
 
 1. install fonts: `# fc-cache -fv ~/.fonts`
 2. add the following line to the `.bashrc` file: `source $HOME/dotfiles/oh-my-git/prompt.sh`
+
+
+Vim
+---
+
+Open *vim* or *gvim* and run: `:PluginInstall`
