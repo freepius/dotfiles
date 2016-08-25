@@ -1,39 +1,3 @@
-[submodule ".vim/bundle/vim-less"]
-	path = .vim/bundle/vim-less
-	url = https://github.com/groenewege/vim-less.git
-[submodule ".vim/bundle/jslint"]
-	path = .vim/bundle/jslint
-	url = https://github.com/hallettj/jslint.vim.git
-[submodule ".vim/bundle/Align"]
-	path = .vim/bundle/Align
-	url = https://github.com/vim-scripts/Align.git
-[submodule ".vim/bundle/comments"]
-	path = .vim/bundle/comments
-	url = https://github.com/vim-scripts/comments.vim
-[submodule ".vim/bundle/local_vimrc"]
-	path = .vim/bundle/local_vimrc
-	url = https://github.com/vim-scripts/local_vimrc.vim.git
-[submodule ".vim/bundle/L9"]
-	path = .vim/bundle/L9
-	url = https://github.com/vim-scripts/L9.git
-[submodule ".vim/bundle/vim-twig"]
-	path = .vim/bundle/vim-twig
-	url = https://github.com/beyondwords/vim-twig
-[submodule ".vim/bundle/vim-autoclose"]
-	path = .vim/bundle/vim-autoclose
-	url = https://github.com/Townk/vim-autoclose.git
-[submodule ".vim/bundle/vim-surround"]
-	path = .vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule ".vim/bundle/vim-fontzoom"]
-	path = .vim/bundle/vim-fontzoom
-	url = https://github.com/thinca/vim-fontzoom.git
-[submodule ".vim/bundle/textile"]
-	path = .vim/bundle/textile
-	url = https://github.com/timcharper/textile.vim.git
-[submodule ".vim/bundle/vim-markdown"]
-	path = .vim/bundle/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown.git
 [submodule "oh-my-git"]
 	path = oh-my-git
 	url = https://github.com/arialdomartini/oh-my-git.git

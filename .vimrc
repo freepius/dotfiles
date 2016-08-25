@@ -1,6 +1,3 @@
-" Load plugins
-call pathogen#infect()
-
 " No compatible with vi
 set nocompatible
 
