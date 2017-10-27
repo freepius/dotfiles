@@ -23,3 +23,10 @@ Vim
 ---
 
 Open *vim* or *gvim* and run: `:PluginInstall`
+
+
+SSH
+---
+
+My ssh public-key:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQC9u/7OoEU8EXTiLJ+P7xQNsGnSYiaKAAFGcrvw/OEneQj7LMvfogiBPJszQcFysgms14ndXNAAhAySEKVvKDN/mPxYneZhgLq/5sHUHPDGUTpzYxSoXhhpKs+QAPEQMPF2Q/thLWJxyJce0RPPLUZx+Zfde6E9pxBjz9y4K9NYrQ== poisbeau@lyp4013
