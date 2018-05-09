@@ -12,13 +12,19 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'L9'
 Plugin 'AutoComplPop'
 Plugin 'comments.vim'
-Plugin 'wookiehangover/jshint.vim'
 Plugin 'itchyny/lightline.vim'
-Plugin 'Townk/vim-autoclose'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'Townk/vim-autoclose'
 Plugin 'thinca/vim-fontzoom'
-Plugin 'groenewege/vim-less'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-sleuth'               "autodetect indentation
+Plugin 'ludovicchabant/vim-gutentags'   "search by tags (using ctags)
+Plugin 'ctrlpvim/ctrlp.vim'             "search by filename (using silversearcher-ag)
+Plugin 'mhinz/vim-grepper'              "search in the files
+
+" syntax plugins
+Plugin 'groenewege/vim-less'
+Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'lumiliet/vim-twig'
 
 call vundle#end()            " required
@@ -54,7 +60,6 @@ set list listchars=tab:>-,trail:.,precedes:<,extends:>
 " Appearance
 syntax on
 colorscheme solarized
-set background=dark    " Adapt colors to dark background
 set laststatus=2       " Enable the full status line (useful for the lightline package)
 set mouse=a            " Enable mouse usage (all modes)
 set number             " Show line numbers
@@ -80,19 +85,19 @@ set autowrite       " Automatically save before commands like :next and :make
 set backspace=indent,eol,start
 set ruler
 
-" Mark in red 'EOL spaces', 'unbreakable spaces' and 81th character
+" Mark in red 'EOL spaces', 'unbreakable spaces' and 121-st character
 highlight NoSpacesEOL ctermbg=red ctermfg=white guibg=#592929
 autocmd BufWinEnter * let w:m2=matchadd('NoSpacesEOL', ' \+$', -1)
 
 highlight NoSpacesUnbreakable ctermbg=red ctermfg=white guibg=#592929
 autocmd BufWinEnter * let w:m2=matchadd('NoSpacesUnbreakable', ' ', -1)
 
-highlight The81Char ctermbg=red ctermfg=white guibg=#592929
-autocmd BufWinEnter * let w:m2=matchadd('The81Char', '\%81v', -1)
+highlight The121Char ctermbg=red ctermfg=white guibg=#592929
+autocmd BufWinEnter * let w:m2=matchadd('The121Char', '\%121v', -1)
 
 " GUI options
 if has('gui_running')
-    set guifont=Monospace\ 10
+    set guifont=Monospace\ 16
 endif
 
 " Removes whitespace at the end of every line
@@ -103,3 +108,37 @@ imap <C-space> <C-k>SN
 
 " map CTRL+k ' 9 (curly apostrophe) to CTRL+a
 imap <C-a> <C-k>'9
+
+
+"---- PLUGINS CONFIG  ------------------------------------------------------------"
+
+" Gutentags plugin
+let g:gutentags_ctags_exclude_wildignore = 0
+let g:gutentags_cache_dir = "~/.cache/gutentags"
+
+" CtrlP plugin
+let g:ctrlp_user_command = 'ag %s -l -U --nocolor -g ""'
+" -U tells ag to ignore .gitignore but to still take .ignore into account
+" to have different ignore rules for git and for CtrlP
+let g:ctrlp_clear_cache_on_exit = 0
+
+" Grepper plugin
+map <C-g> :Grepper<cr>
+map <Leader><C-g> :Grepper -side<cr>
+
+let g:grepper               = {}
+let g:grepper.highlight     = 1
+let g:grepper.next_tool     = '<leader>g'
+let g:grepper.simple_prompt = 1
+let g:grepper.dir = 'repo,cwd'
+let g:grepper.side_cmd = 'botright vnew'
+
+runtime plugin/grepper.vim
+let g:grepper.git.grepprg .= ' --untracked'
+
+let g:grepper.tools = ['git', 'git_grep_everything', 'ag']
+let g:grepper.git_grep_everything = {
+\   'grepprg':    'git grep -nI --untracked --no-exclude-standard',
+\   'grepformat': '%f:%l:%m',
+\   'escape':     '\^$.*[]',
+\ }

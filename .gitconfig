@@ -1,4 +1,4 @@
-[user]
+﻿[user]
     name = freepius
     email = contact@freepius.net
 
@@ -8,7 +8,7 @@
     branch = auto
 
 [core]
-    excludesfile = ~/dotfiles/.global_gitignore
+    excludesfile = ~/.global_gitignore
 
 [alias]
     st = status
