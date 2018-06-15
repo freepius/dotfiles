@@ -17,6 +17,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'Townk/vim-autoclose'
 Plugin 'thinca/vim-fontzoom'
 Plugin 'tpope/vim-surround'
+Plugin 'junegunn/vim-easy-align'
 Plugin 'tpope/vim-sleuth'               "autodetect indentation
 Plugin 'ludovicchabant/vim-gutentags'   "search by tags (using ctags)
 Plugin 'ctrlpvim/ctrlp.vim'             "search by filename (using silversearcher-ag)
