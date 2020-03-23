@@ -22,6 +22,8 @@ Plugin 'tpope/vim-sleuth'               "autodetect indentation
 Plugin 'ludovicchabant/vim-gutentags'   "search by tags (using ctags)
 Plugin 'ctrlpvim/ctrlp.vim'             "search by filename (using silversearcher-ag)
 Plugin 'mhinz/vim-grepper'              "search in the files
+Plugin 'tpope/vim-fugitive'             "a git wrapper
+Plugin 'dpelle/vim-Grammalecte'         "Grammalecte plugin
 
 " syntax plugins
 Plugin 'groenewege/vim-less'
@@ -113,6 +115,12 @@ imap <C-a> <C-k>'9
 
 "---- PLUGINS CONFIG  ------------------------------------------------------------"
 
+"Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 " Gutentags plugin
 let g:gutentags_ctags_exclude_wildignore = 0
 let g:gutentags_cache_dir = "~/.cache/gutentags"
@@ -143,3 +151,6 @@ let g:grepper.git_grep_everything = {
 \   'grepformat': '%f:%l:%m',
 \   'escape':     '\^$.*[]',
 \ }
+
+" Grammalecte plugin
+let g:grammalecte_cli_py='~/.local/share/grammalecte/pythonpath/grammalecte-cli.py'
