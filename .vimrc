@@ -24,6 +24,7 @@ Plugin 'ctrlpvim/ctrlp.vim'             "search by filename (using silversearche
 Plugin 'mhinz/vim-grepper'              "search in the files
 Plugin 'tpope/vim-fugitive'             "a git wrapper
 Plugin 'dpelle/vim-Grammalecte'         "Grammalecte plugin
+Plugin 'editorconfig/editorconfig-vim'
 
 " syntax plugins
 Plugin 'groenewege/vim-less'
@@ -154,3 +155,6 @@ let g:grepper.git_grep_everything = {
 
 " Grammalecte plugin
 let g:grammalecte_cli_py='~/.local/share/grammalecte/pythonpath/grammalecte-cli.py'
+
+" Editorconfig plugin
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']  "avoid conflicts with fugitive plugin
