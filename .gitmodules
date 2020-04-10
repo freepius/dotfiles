@@ -7,3 +7,6 @@
 [submodule "awesome-terminal-fonts"]
 	path = awesome-terminal-fonts
 	url = https://github.com/gabrielelana/awesome-terminal-fonts/
+[submodule "wcs"]
+	path = wcs
+	url = https://github.com/WordPress/WordPress-Coding-Standards.git
