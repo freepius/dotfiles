@@ -5,6 +5,8 @@
 DOTFILES=$(dirname $(readlink -f $0))
 
 # Make links
+ln -s $DOTFILES ~/.dotfiles
+
 LINKS=".global_gitignore .gitconfig .vimrc .fonts .vim"
 for i in $LINKS; do
     ln -s $DOTFILES/$i ~/$i
