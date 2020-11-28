@@ -28,4 +28,4 @@
 [difftool]
     prompt = false
 [pull]
-	rebase = false
+    rebase = false

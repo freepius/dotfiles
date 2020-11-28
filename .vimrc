@@ -155,7 +155,7 @@ let g:grepper.git_grep_everything = {
 \ }
 
 " Grammalecte plugin
-let g:grammalecte_cli_py='~/.local/share/grammalecte/pythonpath/grammalecte-cli.py'
+let g:grammalecte_cli_py='~/.local/share/grammalecte/grammalecte-cli.py'
 
 " Editorconfig plugin
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']  "avoid conflicts with fugitive plugin
