@@ -16,3 +16,6 @@ alias meteoh='meteoWttr Désaignes'
 
 # More aliases
 alias ll='ls -al'
+
+# SSH aliases
+alias myssh='ssh freepius@ssh-freepius.alwaysdata.net'

@@ -1,5 +1,5 @@
 # set some directory shortcuts
-DEVDIR="$HOME/AnarchosSemitas/Informatique/Current"
+export DEVDIR="$HOME/AnarchosSemitas/Informatique/Current"
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
@@ -22,5 +22,5 @@ if [ -d "$HOME/.symfony/bin" ] ; then
     PATH="$HOME/.symfony/bin:$PATH"
 fi
 
-source $DEVDIR/dotfiles/oh-my-git/prompt.sh
+source $HOME/.profile/oh-my-git/prompt.sh
 source $HOME/.bin/wp-completion.bash
