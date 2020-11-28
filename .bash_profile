@@ -2,9 +2,7 @@ if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
     if [ -f ~/.bashrc ]; then
         . ~/.bashrc
-    fi
-else
-    if [ -f ~/.bash_aliases ]; then
+    else
         . ~/.bash_aliases
     fi
 fi
