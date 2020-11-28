@@ -10,7 +10,7 @@ if [ -L ~/.dotfiles ]; then
 fi
 ln -s $DOTFILES ~/.dotfiles
 
-LINKS=".bash_aliases .profile .global_gitignore .gitconfig .vimrc .fonts .vim"
+LINKS=".bash_aliases .bash_profile .global_gitignore .gitconfig .vimrc .fonts .vim"
 for i in $LINKS; do
     if [ -L ~/$i ]; then
       rm ~/$i
@@ -22,8 +22,10 @@ for i in $LINKS; do
 done
 
 # Awesome terminal fonts
-cp $DOTFILES/awesome-terminal-fonts/patched/*.ttf ~/.fonts
-fc-cache -fv ~/.fonts
+if [ -d $DOTFILES/awesome-terminal-fonts/patched/ ]; then
+  cp $DOTFILES/awesome-terminal-fonts/patched/*.ttf ~/.fonts
+  fc-cache -fv ~/.fonts
+fi
 
 # Vim
 vim +:PluginUpdate +:qall
