@@ -9,13 +9,13 @@ fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d ~/.bin ] ; then
-    PATH="~/.bin:$PATH"
+    PATH="$HOME/.bin:$PATH"
 fi
 
 if [ -d ~/.config/composer/vendor/bin ] ; then
-    PATH="~/.config/composer/vendor/bin:$PATH"
+    PATH="$HOME/.config/composer/vendor/bin:$PATH"
 fi
 
 if [ -d ~/.symfony/bin ] ; then
-    PATH="~/.symfony/bin:$PATH"
+    PATH="$HOME/.symfony/bin:$PATH"
 fi
